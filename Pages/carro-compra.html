@@ -1,101 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carro de compras</title>
-    <link rel="shortcut icon" href="../Images/Logo-P1.png">
-    <link rel="stylesheet" href="../Css/styles.css">
-</head>
-<body>
-    <header>
-        <div>
-            <p class="barraCuotas">  3, 6 y 12 cuotas con MercadoPago en toda la tienda. Envíos a toda la Argentina.
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Player One</title>
+        <link rel="shortcut icon" href="../Images/Logo-P1.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="../Css/styles.css">
+        <link rel="stylesheet" href="../animate-wow/animate.min.css">
+        <script src="../animate-wow/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="barraCuotas">
+                <p>  3, 6 y 12 cuotas con MercadoPago en toda la tienda. Envíos a toda la Argentina.
                 </p>    
-        </div>
-
-            <img class="positionLogo" src="../Images/Logo-P1.png" width="120" height="120" alt="logo-de-pagina">
-
-        <div class="cuenta-carro">
-            <ul>
-            <li><a href="crear-cuenta.html"><img src="../Images/inicio-sesion.png" alt="incio-sesion" width="40px" height="40px">Ingresa a Cuenta</a><li>
-        
-            <li><a href="carro-compra.html"><img src="../Images/carrito2.png" alt="carroCompras" width="30px" height="30px">Carro</a></li>
-                
-            </ul>
-        </div>
+            </div>
+    
+            <div class="cuenta-carro">
+                <ul>
+                 <li><a href="../Pages/crear-cuenta.html"><img src="../Images/inicio-sesion.png" alt="incio-sesion" width="40px" height="40px">Ingresa a Cuenta</a><li>
             
-        <div class="displayNavegacion">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="playstation.html">Playstation</a></li>
-                <li><a href="x-box.html">X-box</a></li>
-                <li><a href="nintendo.html">Nintendo</a></li>
-                <li><a href="crear-cuenta.html">Crear-Cuenta</a></li>
-                <li><a href="carro-compra.html">Carrito</a></li>
-            </ul>
+                <li><a href="../Pages/carro-compra.html"><img src="../Images/carrito2.png" alt="carroCompras" width="30px" height="30px">Carro</a></li>
+                </ul>
+            </div>
+                
+            <nav id="menuNavegacion" class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html">
+                  <img class="positionLogo" src="../Images/Logo-P1.png" width="120" height="120" alt="logo-de-pagina">  Tienda Gaming
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="playstation.html">PlayStation</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="x-box.html">Xbox</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="nintendo.html">Nintendo</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="carro-compra.html">Carrito</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                  </div>
+                </div>
+              </nav>
+        </header>
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../Images/Imagen-fondo-index.jpg" class="d-block w-100" alt="carousel1">
+              </div>
+              <div class="carousel-item">
+                <img src="../Images/Imagen-fondo2-index.webp" class="d-block w-100" alt="carousel2">
+              </div>
+              <div class="carousel-item">
+                <img src="../Images/imagen-fondo3-index.png" class="d-block w-100" alt="carousel3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div id="compraJuego" class="card" style="width: 12rem;">
+            <img src="../Images/elden-ring.jpg" class="card-img-top" alt="EldenRing">
+            <div class="card-body">
+              <h5 class="card-title">Elden Ring- PS5</h5>
+              <p class="card-text">$15.000.</p>
         </div>
-    </header>
+        </div>
 
-    <table>
-        <tr class="estiloTablaCarro">
-            <td><img src="../Images/elden-ring.jpg" width="100" height="100" alt="JuegoEldenRing"></td>
-            <td>Elden Ring-PS5</td>
-            <td>$15.000</td>
-        </tr>
-    </table>
+    <form id="formularioCarro" class="row g-3">
+            <div class="col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+              <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend2" required>
+            </div>
+        </div>
+                <div class="col-md-3">
+                    <label for="validationDefault04" class="form-label">Pais</label>
+                    <select class="form-select" id="validationDefault04" required>
+                      <option selected disabled value="paises">Paises...</option>
+                      <option>Argentina</option>
+                      <option>Mexico</option>
+                      <option>Colombia</option>
+                      <option>Venezuela </option>
+                      <option>Uruguay</option>
+                      <option>Paraguay</option>
+                      <option>Brasil</option>
+                    </select>
+                  </div>
+                  </div>
+                  <legend>ENTREGA</legend>
+              <div class="col-md-4">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" required>
+              </div><div class="col-md-4">
+              <label for="entreCalles" class="form-label">Entre Calles</label>
+              <input type="text" class="form-control" id="entreCalles" required>
+            </div>
+          </div><div class="col-md-3">
+          <label for="localidad" class="form-label">Localidad</label>
+          <input type="text" class="form-control" id="localidad" required>
+         </div>
+          </div>
+          <div class="col-md-2">
+                <label for="codigoPostal" class="form-label">Código Postal</label>
+                <input type="number" class="form-control" id="codigoPostal" required>
+          </div>
 
-    <form action="" method="get" enctype="multipart/form-data">
-        <fieldset class="formularioCarro">
-            <legend>DATOS DE CONTACTO</legend>
-            <label for="email">E-Mail</label>
-            <input type="text" name="email">
-
-            <legend>ENTREGA</legend>
-            <label for="pais">País</label>
-            <select name="pais">
-                <option value="argentina">Argentina</option>
-                <option value="mexico">Mexico</option>
-                <option value="colombia">Colombia</option>
-                <option value="venezuela">Venezuela</option>
-                <option value="chile">Chile</option>
-                <option value="uruguay">Uruguay</option>
-                <option value="paraguay">Paraguay</option>
-                <option value="brasil">Brasil</option>
-            </select>
-            <br>
-            <label for="addres">Dirección</label>
-            <input type="text" name="addres">
-            <br>
-            <label for="entreCalles">Entre Calles:</label>
-            <input type="text" name="entreCalles">
-            <br>
-            <label for="localidad">Localidad:</label>
-            <input type="text" name="localidad">
-            <br>
-            <label for="cp">Código Postal</label>
-            <input type="text" name="cp">
-        </fieldset>
-
-        <fieldset class="formularioCarroTarjeta">
+          <form id="formularioCarroTarjeta" class="row g-3 needs-validation" novalidate="">
             <legend>Información de pago</legend>
-            <label for="titular">Titular</label>
-            <input type="text" name="titular">
-            <br>
-            <label for="nroTarjeta">Número de tarjeta:</label>
-            <input type="number" name="nroTarjeta">
-            <br>
-            <label for="vencimiento">Vencimiento</label>
-            <input type="month" name="vencimiento">
-            <label for="cvv">CVV</label>
-            <input type="password" name="cvv" maxlength="3">
-        </fieldset>
+                <div class="col-md-4">
+                  <label for="titular" class="form-label">Titular</label>
+                  <input type="text" class="form-control" id="titular"  required>
+                </div>
+            
+                <div class="col-md-4">
+                    <label for="nroTarjeta" class="form-label">Número de Tarjeta</label>
+                    <input type="number" class="form-control" id="nroTarjeta" required>
+                </div>
+              
+                <div class="col-md-4">
+                    <label for="vencimiento" class="form-label">Vencimiento</label>
+                    <input type="month" class="form-control" id="vencimiento" required>
+                  </div>
 
-        <div class="botonConfirmar">
-        <input type="submit" value="Confirmar compra">
+            <div class="col-md-2">
+    <label for="cvv" class="form-label">CVV</label>
+    <input type="password" class="form-control" id="cvv" maxlength="3" required>
     </div>
-
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Confirmar Compra</button>
+      </div>
     </form>
 
     <footer id="colorLetra">
@@ -129,6 +189,6 @@
             <p>Anatole France 911, Lanús Este.</p>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

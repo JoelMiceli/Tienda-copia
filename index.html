@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player One</title>
     <link rel="shortcut icon" href="Images/Logo-P1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="Css/styles.css">
     <link rel="stylesheet" href="animate-wow/animate.min.css">
     <script src="animate-wow/wow.min.js"></script>
@@ -21,8 +22,6 @@
             </p>    
         </div>
 
-            <img class="positionLogo" src="Images/Logo-P1.png" width="120" height="120" alt="logo-de-pagina">
-
         <div class="cuenta-carro">
             <ul>
              <li><a href="Pages/crear-cuenta.html"><img src="Images/inicio-sesion.png" alt="incio-sesion" width="40px" height="40px">Ingresa a Cuenta</a><li>
@@ -31,95 +30,164 @@
             </ul>
         </div>
             
-        <div class="displayNavegacion">
-            <ul>
-            <li><a href="Pages/playstation.html">Playstation</a></li>
-            <li><a href="pages/x-box.html">X-box</a></li>
-            <li><a href="pages/nintendo.html">Nintendo</a></li>
-            <li><a href="pages/crear-cuenta.html">Crear-Cuenta</a></li>
-            <li><a href="pages/carro-compra.html">Carrito</a></li>
-        </ul>
-        </div>
+        <nav id="menuNavegacion" class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+              <img class="positionLogo" src="Images/Logo-P1.png" width="120" height="120" alt="logo-de-pagina">  Tienda Gaming
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Pages/playstation.html">PlayStation</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Pages/x-box.html">Xbox</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Pages/nintendo.html">Nintendo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Pages/crear-cuenta.html">Crear-Cuenta</a>
+                    <li class="nav-item">
+                    <a class="nav-link" href="Pages/carro-compra.html">Carrito</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+              </div>
+            </div>
+          </nav>
     </header>
 
-    <div class="barraBusqueda">
-    <input type="search" name="search" id="Search" placeholder="¿Que estas buscando?">
-    </div>
-<nav>
-    <div class="displayMenu">
-        <ul>
-            <li>PLAYSTATION
-            <ul> 
-            <li>Consolas</li>
-            <li>Joysticks</li>
-            <li>Juegos Físicos</li>
-            <li>Juegos Digitales</li>
-            </ul>
-        </li>
-        </ul>
-    
-        <ul>
-            <li>XBOX
-            <ul> 
-            <li>Consolas</li>
-            <li>Joysticks</li>
-            <li>Juegos Físicos</li>
-            <li>Juegos Digitales</li>
-            </ul>
-        </li>
-        </ul>
-    
-         <ul>
-            <li>XBOX
-         <ul> 
-            <li>Consolas</li>
-            <li>Joysticks</li>
-            <li>Juegos Físicos</li>
-            <li>Juegos Digitales</li>
-         </ul>
-        </li>
-        </ul>
-    </div>
+<nav id="menuCategorias">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              PLAYSTATION
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"> <p>Consolas</p>
+                <p>Joysticks</p>
+                <p>Juegos Físicos</p>
+                <p>Juegos Digitales</p></div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              XBOX
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+            <p>Consolas</p>
+            <p>Joysticks</p>
+            <p>Juegos Físicos</p>
+            <p>Juegos Digitales</p> 
+              </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              NINTENDO
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+                <p>Consolas</p>
+                <p>Joysticks</p>
+                <p>Juegos Físicos</p>
+            </div>
+          </div>
+        </div>
+      </div>
 </nav>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Images/Imagen-fondo-index.jpg" class="d-block w-100" alt="carousel1">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/Imagen-fondo2-index.webp" class="d-block w-100" alt="carousel2">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/imagen-fondo3-index.png" class="d-block w-100" alt="carousel3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
      <h4 class="margenProducto">Productos Destacados</h4>
      
-     <section id="grillaProductos" class="wow animate__animated animate__pulse" data-wow-duration="2s" data-wow-iteration="infinite">
+     <section id="grillaProductos" >
+        <div class="card" style="width: 12rem;">
+            <img src="Images/elden-ring.jpg" class="card-img-top" alt="EldenRing">
+            <div class="card-body">
+              <h5 class="card-title">Elden Ring- PS5</h5>
+              <p class="card-text">$15.000.</p>
+              <a href="Pages/carro-compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+        </div>
 
-        <div class="displayProductos">
-           <img src="Images/elden-ring.jpg" width="100" height="100" alt="EldenRing">
-           <p>Elden Ring-PS5</p>
-           <p>$15.000</p>
-       </div>
+        <div class="card" style="width: 12rem;">
+            <img src="Images/demons-souls.png" class="card-img-top" alt="DemonSouls">
+        <div class="card-body">
+              <h5 class="card-title">Demon Souls-PS5</h5>
+              <p class="card-text">$16.000.</p>
+              <a href="Pages/carro-compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+        </div>
 
-       <div class="displayProductos">
-        <img src="Images/demons-souls.png" width="100" height="100" alt="DemonSouls">
-        <p>Demon Souls-PS5</p>
-        <p>$16.000</p>
-       </div>
-
-       <div class="displayProductos">
-        <img src="Images/joy-negro-xbox.jpg" width="100" height="100" alt="JoyBox">
-        <p>Joystick Negro-Xbox</p>
-        <p>$17.000</p>
-       </div>
-   
-       <div class="displayProductos">
-           <img src="Images/resident-evil-8-village.jpg" width="100" height="100" alt="ResidentEvil">          
-           <p>Resident Evil Village-PS5</p>
-           <p>$12.000</p>
+        <div class="card" style="width: 12rem;">
+            <img src="Images/joy-negro-xbox.jpg" class="card-img-top" alt="JoyBox">
+            <div class="card-body">
+              <h5 class="card-title">Joystick Negro-Xbox</h5>
+              <p class="card-text">$17.000</p>
+              <a href="Pages/carro-compra.html" class="btn btn-primary">Comprar</a>
+        </div>
         </div>
    
-        <div class="displayProductos">
-           <img src="Images/SuperMario3d.jpg" width="100" height="100" alt="SuperMario">  
-           <p>Super Mario 3D All Star-Nintendo Switch</p>
-           <p>$14.900</p>
+        <div class="card" style="width: 12rem;">
+            <img src="Images/resident-evil-8-village.jpg" class="card-img-top" alt="ResidentEvil">
+        <div class="card-body">
+              <h5 class="card-title">Resident Evil Village-PS5</h5>
+              <p class="card-text">$12.000</p>
+              <a href="Pages/carro-compra.html" class="btn btn-primary">Comprar</a>
+        </div>
         </div>
    
-        <div class="displayProductos">
-            <img src="Images/gran-turismo-7.jpg" width="100" height="100" alt="GranTurismo">      
-            <p>Gran Turismo 7-PS4</p>
-            <p>$12.000</p>
+        <div class="card" style="width: 12rem;">
+            <img src="Images/SuperMario3d.jpg" class="card-img-top" alt="SuperMario">
+        <div class="card-body">
+              <h5 class="card-title">Super Mario 3D All Star-Nintendo Switch</h5>
+              <p class="card-text">$14.900</p>
+              <a href="Pages/carro-compra.html" class="btn btn-primary">Comprar</a>
+        </div>
+        </div>
+   
+        <div class="card" style="width: 12rem;">
+            <img src="Images/gran-turismo-7.jpg" class="card-img-top" alt="GranTurismo">
+        <div class="card-body">
+              <h5 class="card-title">Gran Turismo 7-PS4</h5>
+              <p class="card-text">$12.000</p>
+              <a href="Pages/carro-compra.html" class="btn btn-primary">Comprar</a>
+        </div>
         </div>
    </section>
 
@@ -154,5 +222,6 @@
         <p>Anatole France 911, Lanús Este.</p>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
