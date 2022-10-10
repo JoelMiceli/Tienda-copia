@@ -20,21 +20,77 @@ while(consultaUsuario != "exit") {
  consultaUsuario = prompt("Que titulo buscas? Ingresa 'exit' para salir");
 }*/
 
-//Funcion:
-function calcularDescuentoJuego(precio, porcentaje){
+/*function calcularDescuentoJuego(precio, porcentaje){
     let valorDescuento = precio * porcentaje / 100;
     let precioFinal = precio - valorDescuento;
     return precioFinal;
-}
-function juegoUsuario(){
-    let nombreJuego = prompt("Como se llama el juego?");
-    let consolaJuego = prompt("Para que consola es?");
-    let precioJuego = parseFloat(prompt("Cual es el precio?"));
-    let descuentoJuego = parseInt(prompt("Cuanto descuento tiene?"));
-    
-    let precioFinal = calcularDescuentoJuego(precioJuego, descuentoJuego);
-    let juego =  console.log(`El juego que elegiste es ${nombreJuego} para la consola ${consolaJuego} y su precio final es ${precioFinal}`);
-    return juego
+}*/
+
+
+//Objeto constructor y ej. de metodos
+class Juego {
+    constructor(nombre, genero, consola, precio) {
+        this.nombre = nombre.toLowerCase(); 
+        this.genero = genero.toLowerCase();
+        this.consola = consola.toLowerCase();
+        this.precio = parseFloat(precio);
+        this.vendido = false;
+    }
+    agregarIva(){
+        this.precio = this.precio * 1,21;
+    }
+    vender(){
+        this.vendido = true;
+    }
 }
 
-juegoUsuario()
+const juegoUsuario = ()=>{
+    let nombreJuego = prompt("Como se llama el juego?");
+    let generoJuego = prompt("Cual es el genero?");
+    let consolaJuego = prompt("Para que consola es?");
+    let precioJuego = parseFloat(prompt("Cual es el precio?"));
+    
+    const juego = new Juego(nombreJuego, generoJuego, consolaJuego, precioJuego,)
+    console.log(juego);
+    return juego;
+}
+
+//Array
+const juegosDisponibles = ["elden ring", "demon souls", "resident evil village", "super mario", "gran turismo 7", "halo"];
+
+const carritoCompras = [];
+let productoUsuario = prompt("Que juego queres agregar al carro?").toLocaleLowerCase();
+
+const agregarProducto = ()=> {
+    let stockSi = juegosDisponibles.includes(productoUsuario);
+    if(stockSi){
+        carritoCompras.push(productoUsuario)
+    }else {
+    alert("Sin stock disponible");
+    } 
+    }
+agregarProducto()
+console.log(carritoCompras);
+
+
+//Funciones de orden superior
+
+const stockProductos = [
+    {nombre:"elden ring", precio:15000},
+    {nombre:"demon souls", precio:16000},
+    {nombre:"resident evil village", precio:12000},
+    {nombre:"super mario", precio:14900},
+    {nombre:"gran turismo 7", precio:11000},
+    {nombre:"halo", precio:13000}
+];
+
+stockProductos.forEach(producto=>{
+    console.log(`El juego es ${producto.nombre} tiene stock disponible, y su precio es de $${producto.precio}`)
+})
+
+let juegoAbuscar = prompt("Que producto estas buscando?").toLocaleLowerCase();
+let consultarStock = stockProductos.find(elemento=> elemento.nombre == juegoAbuscar);
+console.log(consultarStock);
+
+let filtrarPorPrecio = stockProductos.filter(elemento => elemento.precio > 12000);
+console.log(filtrarPorPrecio);
