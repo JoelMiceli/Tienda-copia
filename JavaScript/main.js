@@ -92,5 +92,5 @@ let juegoAbuscar = prompt("Que producto estas buscando?").toLocaleLowerCase();
 let consultarStock = stockProductos.find(elemento=> elemento.nombre == juegoAbuscar);
 console.log(consultarStock);
 
-let filtrarPorPrecio = stockProductos.filter(elemento => elemento.precio > 12000);
+let filtrarPorPrecio = stockProductos.filter(elemento => elemento.precio > 11500);
 console.log(filtrarPorPrecio);
